@@ -21,11 +21,9 @@ export const decodeJwt = (jwtString) => {
 }
 
 export const getPrivateKey = () => {
-    return '--super-secret-jwt-key'
-    //return import.meta.env.VITE_JWT_PRIVATE_KEY
+    return import.meta.env.VITE_JWT_PRIVATE_KEY
 }
 
 export const getPublicKey = () => {
-    return '--super-secret-jwt-key'
-    //return import.meta.env.VITE_JWT_PUBLIC_KEY
+    return import.meta.env.VITE_JWT_PUBLIC_KEY
 }
