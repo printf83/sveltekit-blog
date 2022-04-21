@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken'
 export const signJwt = (payload) => {
     return jwt.sign(payload, getPrivateKey(), {
         expiresIn: '7 days',
-        algorithm: 'RS256',
+        //algorithm: 'RS256',
     })
 }
 
@@ -21,9 +21,11 @@ export const decodeJwt = (jwtString) => {
 }
 
 export const getPrivateKey = () => {
-    return import.meta.env.VITE_JWT_PRIVATE_KEY
+    return '--super-secret-jwt-key'
+    //return import.meta.env.VITE_JWT_PRIVATE_KEY
 }
 
 export const getPublicKey = () => {
-    return import.meta.env.VITE_JWT_PUBLIC_KEY
+    return '--super-secret-jwt-key'
+    //return import.meta.env.VITE_JWT_PUBLIC_KEY
 }
